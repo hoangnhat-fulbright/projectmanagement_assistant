@@ -1,0 +1,28 @@
+[00:00] Quang: Ok team, mình bắt đầu sprint sync nhé. Hôm nay đi nhanh qua board rồi chốt việc cho buổi demo.
+[00:20] Quang: Nhắc lại là demo với khách vào 10 giờ sáng thứ Hai tuần sau, nên tuần này là tuần chạy nước rút.
+[00:41] Khoa: Em update trước. Tuần trước em đã deploy bản hotfix lên staging rồi, chạy ổn.
+[00:55] Khoa: Còn một bug là webhook thanh toán thỉnh thoảng bị gọi hai lần, khách bị trừ tiền double.
+[01:12] Quang: Cái đó nghiêm trọng đấy. Khoa fix cái bug webhook đó trước thứ Năm được không?
+[01:20] Khoa: Dạ được anh, em nhận.
+[01:26] Mai: Bug đó em reproduce được rồi, em gửi log cho Khoa sau buổi này.
+[01:40] Quang: À không, thứ Năm anh nghỉ phép. Khoa cố xong trước thứ Tư giúp anh nhé, để anh còn kịp review.
+[01:52] Khoa: Ok anh, thứ Tư.
+[02:05] Khoa: Tiện thể em đang nghĩ không biết có nên chuyển sang dùng queue khác không, cái hiện tại hơi chậm.
+[02:18] Quang: Ừ để sau demo tính. Mình nên refactor module notification lúc nào đó nữa, nhưng chưa phải bây giờ.
+[02:35] Thảo: Phần design thì mockup onboarding mới em gần xong. Để em finalize rồi gửi Đức trong ngày mai.
+[02:50] Đức: Ok chị. Có mockup là em implement màn onboarding luôn, em sẽ xong trước cuối tuần này.
+[03:08] Quang: Good. Đức ơi, em chuẩn bị luôn demo script cho buổi thứ Hai được không?
+[03:16] Đức: Tuần này em kẹt onboarding rồi anh ơi, sợ không kịp.
+[03:24] Mai: Để em làm demo script cho, em rành flow nhất mà.
+[03:30] Quang: Ok vậy Mai làm demo script nhé, xong trước thứ Sáu để cả team chạy thử.
+[03:44] Quang: Mai viết giúp anh bộ regression test cho payment flow luôn, cần xong trước buổi demo.
+[03:55] Mai: Dạ, em sẽ handle cả hai.
+[04:10] Thảo: Anh ơi còn tính năng export PDF thì sao ạ?
+[04:18] Quang: Nếu khách đồng ý thêm ngân sách thì mình mới làm export PDF, giờ chưa cần đụng tới.
+[04:32] Quang: Về phía anh, I'll confirm lại scope với khách trong hôm nay rồi báo mọi người.
+[04:45] Khoa: Còn tài liệu API nữa anh, đang outdated so với bản mới.
+[04:52] Quang: Ừ, cần ai đó update tài liệu API trước khi release. Để anh xem ai rảnh.
+[05:05] Quang: À, anh Tùng bên sales nói sẽ gửi danh sách khách pilot cho mình trong tuần này.
+[05:18] Đức: Anh ơi, bản build mobile lần trước em đã gửi cho QA rồi nhé.
+[05:25] Mai: Em nhận được rồi, test xong hết không có gì nghiêm trọng.
+[05:38] Quang: Tốt. Vậy chốt nhé, mọi người có gì vướng thì ping anh. Hết giờ rồi, cảm ơn cả team.
