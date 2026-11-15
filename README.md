@@ -16,9 +16,11 @@ Weekly Assistant (Trợ lý tuần) guides a team from goal setting to weekly ex
 
 Small teams are common in Vietnam, including high school and university groups, startups, workplace teams, and people working on personal projects. Many of these teams need a clear way to set goals, divide responsibilities, track progress, and coordinate meetings, but they may not have a project manager or prior experience with project management frameworks.
 
-Existing tools such as Notion and Trello are flexible, but teams often have to build their own workflows, templates, and task structures. This setup takes time and can feel overwhelming, especially for new users. As a result, teams may spend more time organizing the work than doing it, assign tasks verbally, lose track of deadlines, or struggle to follow up on work that needs review.
+Most importantly, these teams lack a formal, standardized tracking tool to hold members accountable. Without an official system to log tasks, submissions, and deadlines, student groups and small teams rely on scattered messages and verbal agreements. As a result, team leads and active members constantly struggle to nudge or remind teammates, and when someone falls behind, there is no clear, objective evidence to prove low commitment or track who actually delivered what.
 
-The product idea came from team’s project management experience. A recurring pain point was the time spent on administrative work, such as setting up a project plan, organizing tasks, and coordinating follow-ups. The team wanted to reduce this overhead and make it easier for people without project management experience to adopt a planning tool. The product aims to reduce repetitive setup and coordination work through guided brainstorming, suggested milestones and task breakdowns, weekly planning, task tracking, and meeting coordination. Its simple, Vietnamese-friendly experience is intended to reduce the anxiety of adopting a new tool, make project management easier to learn, and encourage teams to return to a regular weekly planning and follow-up routine.
+Existing tools such as Notion and Trello are flexible, but teams often have to build their own workflows, templates, and task structures from scratch. This setup takes time and can feel overwhelming, especially for new users. Because of this friction, teams either spend more time organizing the work than doing it, or abandon the tool altogether—falling back into assigning tasks verbally, losing track of deadlines, and struggling to follow up on work that needs review.
+
+The product idea came from the team’s own project management experience. A recurring pain point was both the administrative overhead of setting up a project plan and the awkward, exhausting effort required to chase teammates without clear progress records. The team wanted to provide an out-of-the-box, standardized workflow through guided brainstorming, suggested milestones and task breakdowns, weekly planning, transparent task tracking, and meeting coordination. Its simple, Vietnamese-friendly experience is intended to reduce the anxiety of adopting a new tool, establish clear accountability with visible progress evidence, and encourage teams to return to a regular weekly planning and follow-up routine.
 
 ## Target users
 
@@ -36,6 +38,7 @@ The product idea came from team’s project management experience. A recurring p
 - Task assignment, submission, review, and revision to support a feedback loop.
 - Meeting scheduling based on team members’ availability.
 - Role-aware views for team leads, members, and observers.
+- An immutable project completion summary report generated upon project wrap-up, serving as an official, tamper-proof record of each member’s verified contributions, completed tasks, and on-time delivery.
 
 ## Launch and growth
 
