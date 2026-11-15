@@ -43,7 +43,7 @@ flowchart LR
 
 **Xong khi:** một nhóm thật dùng cho các buổi họp của mình trong 2 tuần và tỷ lệ xác nhận đạt mục tiêu ở [Tổng quan](01-tong-quan-san-pham.md#thước-đo-thành-công).
 
-**Tình trạng (2026-11-14):** đã có code cho toàn bộ các mục trên, cách chạy ở [README của mã nguồn](../README.vi.md).
+**Tình trạng (2026-11-14):** đã có code cho toàn bộ các mục trên, cách chạy ở [README của mã nguồn](../README.md).
 
 | Hạng mục | Tình trạng |
 |---|---|
@@ -69,7 +69,7 @@ Còn thiếu so với thiết kế: bản tổng hợp gửi người chủ trì
 
 **Xong khi:** nudge được gửi đúng vào khoảng trống trong lịch thật, và tỷ lệ phản hồi cao hơn rõ rệt so với nhắc giờ cố định (chạy song song hai nhóm để so sánh).
 
-**Tình trạng (2026-11-14):** thuật toán, lập lịch và gửi nudge đã có code và chạy được với lịch nhập tay. Chưa nối với lịch thật. Cách thử ở [README của mã nguồn](../README.vi.md#nhắc-việc-theo-lịch-giai-đoạn-2); những chỗ bản code khác thiết kế ở [Nudging](04-context-aware-nudging.md#bản-đang-chạy-khác-gì-thiết-kế).
+**Tình trạng (2026-11-14):** thuật toán, lập lịch và gửi nudge đã có code và chạy được với lịch nhập tay. Chưa nối với lịch thật. Cách thử ở [README của mã nguồn](../README.md#calendar-aware-reminders-phase-2); những chỗ bản code khác thiết kế ở [Nudging](04-context-aware-nudging.md#bản-đang-chạy-khác-gì-thiết-kế).
 
 | Hạng mục | Tình trạng |
 |---|---|

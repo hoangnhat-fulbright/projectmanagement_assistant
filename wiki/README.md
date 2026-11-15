@@ -1,6 +1,6 @@
 # Wiki dự án: App ghi chú họp có cam kết và nhắc việc thông minh
 
-> Cập nhật lần cuối: 2026-11-14 · Trạng thái: giai đoạn 1 đã có code chạy được trên máy (xem [README của mã nguồn](../README.vi.md) và [Roadmap](11-roadmap.md)); giai đoạn 2 trở đi mới là thiết kế
+> Cập nhật lần cuối: 2026-11-14 · Trạng thái: giai đoạn 1 đã có code chạy được trên máy (xem [README của mã nguồn](../README.md) và [Roadmap](11-roadmap.md)); giai đoạn 2 trở đi mới là thiết kế
 
 App ghi chú cuộc họp bằng AI theo hướng [Granola](https://www.granola.ai/) (ghi âm trực tiếp trên máy, không cần bot tham gia cuộc họp, AI biến ghi chú thô thành biên bản), cộng thêm ba tính năng để **việc sau cuộc họp thực sự được làm**:
 

@@ -1,8 +1,6 @@
 # Tracking plan
 
-_English version. Bản tiếng Việt: [TRACKING_PLAN.vi.md](TRACKING_PLAN.vi.md)._
-
-This document lists the events **Cam kết sau họp** records, what each one measures, and why that matters for the product.
+This document lists the events **Project Assistant** records, what each one measures, and why that matters for the product.
 
 The "Status" column separates two kinds of event: **Recorded** means the current code already stores it in the database; **Not recorded** means it has to be added before real users arrive. There are no real numbers yet: the product has no users.
 
