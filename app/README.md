@@ -1,4 +1,4 @@
-# Trợ lý tuần — bản dựng thử (prototype)
+# Trợ lý tuần 
 
 App quản lý việc theo tuần cho chủ doanh nghiệp nhỏ: mỗi ngày app chỉ ra đúng một việc tiếp theo cần làm.
 Đặc tả nằm trong `../scrum-pm-wiki/wiki/`, giao diện theo `../design.md`.
@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-Mở http://localhost:5173. Kiểm tra kiểu và build bản phát hành: `npm run build`.
+Kiểm tra kiểu và build bản phát hành: `npm run build`.
 
 ## Hai cách chạy
 
