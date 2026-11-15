@@ -1,5 +1,0 @@
-Phạm Quang <quang@example.com>
-Đỗ Thảo <thao@example.com>
-Vũ Khoa <khoa@example.com>
-Nguyễn Mai <mai@example.com>
-Trần Đức <duc@example.com>
