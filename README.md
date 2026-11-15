@@ -37,7 +37,7 @@ The product idea came from team’s project management experience. A recurring p
 
 The initial launch would focus on online outreach to the intended users. Short product walkthroughs, practical project-planning tips, and demonstrations can be shared through social media and student or startup communities. The team can also invite clubs, classes, and small teams to try the MVP, collect feedback, and encourage referrals between groups.
 
-A possible revenue direction is a free plan for small teams with paid tiers for larger teams or advanced project features. This is a hypothesis to validate with users, not a confirmed business model.
+A possible revenue direction is a free plan for small teams with paid tiers for larger teams or advanced project features. 
 
 ## How to access and use the MVP
 
