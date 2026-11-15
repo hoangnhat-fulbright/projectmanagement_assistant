@@ -1,0 +1,10 @@
+# File này do scripts/deploy.mjs sinh ra. Chỉ những mục khai báo ở đây mới được đẩy lên Supabase;
+# các thiết lập khác của project giữ nguyên.
+project_id = "tro-ly-tuan"
+
+[auth]
+site_url = "https://tro-ly-tuan.vercel.app"
+additional_redirect_urls = ["https://tro-ly-tuan.vercel.app", "http://localhost:5173"]
+
+# Chưa khai báo mẫu thư: gói miễn phí chỉ cho sửa mẫu thư sau khi gắn dịch vụ gửi thư riêng (SMTP).
+# Gắn xong, chạy lại "npm run deploy" để thư có mã 6 số.

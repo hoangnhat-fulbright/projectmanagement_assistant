@@ -1,0 +1,585 @@
+/* Brainstorm — thiết kế cho share màn hình: chữ to, mỗi lúc một việc chính. */
+
+.bs {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 3);
+  font-size: 1.0625rem;
+}
+
+.bs h1 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+}
+
+.bs-narrow {
+  max-width: 760px;
+}
+
+.bs-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--u) * 2);
+}
+
+.bs-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bs-steps button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 4px 12px;
+  border-radius: var(--r);
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bs-steps button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bs-steps button.on {
+  background: var(--blue-soft);
+  border-color: var(--blue);
+  color: var(--blue-ink);
+  font-weight: 700;
+}
+
+.bs-steps .no {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.goal-box {
+  padding: calc(var(--u) * 3);
+  border-top: 6px solid var(--blue);
+}
+
+.goal-box .goal-text {
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-strong);
+  text-wrap: pretty;
+}
+
+.big-input {
+  font-size: 1.25rem;
+  min-height: 56px;
+}
+
+/* Thuật ngữ tiếng Anh kèm giải thích */
+.term-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.term {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: help;
+  text-decoration: underline dotted var(--blue);
+  text-underline-offset: 4px;
+}
+
+.term-pop {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: var(--z-overlay);
+  width: max-content;
+  max-width: min(320px, 80vw);
+  padding: 8px 12px;
+  background: var(--text-strong);
+  color: #fff;
+  border-radius: var(--r);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: var(--shadow-lift);
+}
+
+/* Bảng chấm SMART */
+.smart {
+  display: flex;
+  flex-direction: column;
+}
+
+.smart-row {
+  display: grid;
+  grid-template-columns: 44px 28px minmax(0, 1fr);
+  align-items: center;
+  gap: calc(var(--u) * 1.5);
+  padding: calc(var(--u) * 1.25) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.smart-row:last-of-type {
+  border-bottom: 0;
+}
+
+.smart-letter {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #fff;
+  background: #b8a9a2;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.16);
+}
+
+.smart-row.ok .smart-letter {
+  background: var(--grass);
+}
+
+.smart-row.unclear .smart-letter {
+  background: var(--lava);
+}
+
+.smart-row.missing .smart-letter {
+  background: var(--danger);
+}
+
+.smart-row.ok .state {
+  color: #2e6b32;
+}
+
+.smart-row.unclear .state {
+  color: var(--lava-ink);
+}
+
+.smart-row.missing .state {
+  color: var(--danger);
+}
+
+.smart-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-strong);
+}
+
+.smart-row .hint {
+  display: block;
+}
+
+/* Milestone & WBS */
+.ms-card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 1.5);
+}
+
+.ms-card.suggested {
+  border-style: dashed;
+  border-color: var(--blue);
+}
+
+.ms-index {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18);
+}
+
+.wbs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--u);
+  padding-left: calc(var(--u) * 2);
+  border-left: 3px solid #cfdcf5;
+  margin-left: 18px;
+}
+
+.wbs-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: calc(var(--u) * 1.25) calc(var(--u) * 1.5);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+}
+
+.wbs-row.suggested {
+  border-style: dashed;
+  border-color: var(--blue);
+}
+
+.wbs-row .title {
+  font-weight: 600;
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+
+.wbs-no {
+  flex: none;
+  min-width: 30px;
+  font-size: 0.875rem;
+  padding-top: 2px;
+}
+
+.card-actions .btn-sm {
+  min-height: 32px;
+  padding: 4px 10px;
+}
+
+.btn.has-concern {
+  border-color: var(--lava);
+  color: var(--lava-ink);
+  background: var(--lava-soft);
+}
+
+.date-stepper {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 2px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r);
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.date-stepper .btn-icon {
+  width: 30px;
+  min-height: 32px;
+}
+
+.lock-bar {
+  position: sticky;
+  bottom: calc(var(--u) * 2);
+  border-top: 6px solid var(--accent-edge);
+  z-index: 5;
+}
+
+@media (max-width: 767px) {
+  .wbs {
+    padding-left: var(--u);
+    margin-left: 4px;
+  }
+  /* Màn hình hẹp: thanh chốt nằm cuối trang thay vì nổi che nội dung. */
+  .lock-bar {
+    position: static;
+  }
+  /* Tên milestone / task chiếm trọn dòng; ngày và người làm xuống dòng dưới. */
+  .ms-head,
+  .wbs-row > .row {
+    flex-wrap: wrap;
+  }
+  .ms-head > .grow {
+    flex: 1 1 calc(100% - 56px);
+  }
+  .wbs-row > .row > .grow {
+    flex: 1 1 calc(100% - 46px);
+  }
+  .ms-head > .date-stepper,
+  .ms-head > .tag {
+    margin-left: 52px;
+  }
+  .wbs-row > .row > .avatar {
+    margin-left: 42px;
+  }
+}
+
+/* Task brief */
+.brief {
+  display: grid;
+  grid-template-columns: minmax(96px, auto) minmax(0, 1fr);
+  gap: 8px 16px;
+  margin: 0;
+}
+
+.brief dt {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.brief dd {
+  margin: 0;
+}
+
+.brief-notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brief-notes li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.brief-notes svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--blue-ink);
+}
+
+/* Khu ghi chú (thanh bên) */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(400px, 100vw);
+  z-index: var(--z-overlay);
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: var(--shadow-lift);
+  padding: calc(var(--u) * 2.5);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 2);
+  overflow-y: auto;
+  font-size: 1rem;
+  animation: enter 300ms ease-out backwards;
+}
+
+.drawer-list .note-unused {
+  opacity: 0.6;
+}
+
+/* Lưới 4 ô stakeholder */
+.quad-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--u);
+}
+
+.quad {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 120px;
+  padding: calc(var(--u) * 1.5);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-top: 6px solid #b8a9a2;
+}
+
+.quad-key {
+  border-top-color: var(--danger);
+}
+
+.quad-satisfy {
+  border-top-color: #f2b84b;
+}
+
+.quad-inform {
+  border-top-color: var(--grass);
+}
+
+.quad-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+@media (max-width: 767px) {
+  .quad-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.template {
+  margin: 0;
+  padding: calc(var(--u) * 1.5);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Tổng kết */
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plan-table th,
+.plan-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.plan-table th {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.plan-table td.num {
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+@media print {
+  .side-nav,
+  .topbar,
+  .bottom-nav,
+  .no-print,
+  .bs-head {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .app {
+    display: block;
+  }
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
+
+/* Skeleton trong lúc chờ AI: chỉ đổi opacity, không dùng vòng xoay. */
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.skeleton {
+  display: block;
+  height: 18px;
+  border-radius: 6px;
+  background: #cfdcf5;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton.tall {
+  height: 44px;
+}
+
+.skeleton.w60 {
+  width: 60%;
+}
+
+.skeleton.w80 {
+  width: 80%;
+}
+
+/* ===== Thứ tự ưu tiên của task (D-010) ===== */
+.prio-high {
+  background: var(--lava-soft);
+  color: var(--lava-ink);
+  border-color: rgba(255, 112, 67, 0.45);
+}
+
+.prio-low {
+  opacity: 0.8;
+}
+
+.prio-btn {
+  font-family: inherit;
+  cursor: pointer;
+  min-height: 28px;
+  transition: transform 120ms ease-out;
+}
+
+.prio-btn:hover {
+  transform: translateY(-1px);
+}
+
+.prio-btn:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* ===== Chế độ chỉ xem (Observer) ===== */
+.bs-readonly {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--r);
+  background: var(--blue-soft);
+  color: var(--blue-ink);
+  border: 1px solid rgba(68, 138, 255, 0.4);
+  font-weight: 600;
+}
+
+.bs-readonly svg {
+  flex: none;
+}
+
+/* ===== Màn Bắt đầu: phần mở ra theo lối vào đã chọn ===== */
+.bs-sub {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 1.5);
+  padding-left: calc(var(--u) * 2);
+  border-left: 3px solid #cfdcf5;
+  margin-left: 18px;
+}
+
+.bs-sub .field {
+  border-left: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Cột tên Milestone / Task luôn đủ rộng để đọc; bảng rộng hơn màn hình thì cuộn ngang trong thẻ. */
+.plan-table th.col-main {
+  min-width: 220px;
+}

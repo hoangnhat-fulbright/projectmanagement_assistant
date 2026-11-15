@@ -1,0 +1,280 @@
+/* Tìm giờ họp chung — dùng token trong styles.css */
+
+.mt-poll {
+  align-items: flex-start;
+}
+
+.mt-poll .title {
+  font-size: 1.0625rem;
+}
+
+.mt-section-title {
+  font-size: 1.125rem;
+}
+
+.mt-kind-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.mt-kind-disabled:hover {
+  box-shadow: none;
+}
+
+.mt-hours {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: calc(var(--u) * 2);
+}
+
+/* ----- Màn hình tô giờ rảnh ----- */
+.mt-daynav {
+  display: flex;
+  align-items: center;
+  gap: var(--u);
+}
+
+.mt-daynav .mt-day {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.mt-daynav .mt-day strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--text-strong);
+}
+
+.mt-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mt-dots span {
+  width: 18px;
+  height: 6px;
+  border-radius: 3px;
+  background: #cfdcf5;
+}
+
+.mt-dots span.on {
+  background: var(--blue);
+}
+
+.mt-dots span.has {
+  background: var(--grass);
+}
+
+.mt-dots span.on.has {
+  background: var(--blue);
+}
+
+.mt-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mt-row {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--u);
+}
+
+.mt-time {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Vuốt ở cột giờ để cuộn; vùng tô thì không cuộn. */
+  touch-action: pan-y;
+}
+
+.mt-cell {
+  height: 40px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: transparent;
+  cursor: pointer;
+  touch-action: none;
+  transition: transform 120ms ease-out, opacity 120ms ease-out;
+}
+
+.mt-grid.dense .mt-cell {
+  height: 26px;
+  font-size: 0.75rem;
+}
+
+.mt-grid.dense .mt-row.minor .mt-time {
+  opacity: 0.55;
+}
+
+.mt-cell.on {
+  background: var(--grass-soft);
+  border-color: var(--grass);
+  color: #2e6b32;
+  box-shadow: inset 0 -3px 0 rgba(102, 187, 106, 0.45);
+}
+
+.mt-cell:active {
+  transform: scale(0.99);
+}
+
+.mt-cell:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* ----- Kết quả ----- */
+.mt-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u) calc(var(--u) * 2);
+}
+
+.mt-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+
+.mt-person.pending {
+  opacity: 0.6;
+}
+
+.mt-best {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--u) * 1.5);
+}
+
+.mt-best .mt-rank {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.18);
+}
+
+.mt-best.first {
+  border-top: 4px solid var(--blue);
+}
+
+.mt-best .mt-slot {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.mt-heat-wrap {
+  overflow-x: auto;
+}
+
+.mt-heat {
+  display: grid;
+  gap: 3px;
+  min-width: min-content;
+}
+
+.mt-heat .mt-head {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 2px 2px;
+  /* Cột hẹp trên điện thoại: "T2 16/11" tự xuống 2 dòng thay vì dính vào cột bên cạnh. */
+  overflow-wrap: normal;
+  min-width: 0;
+}
+
+.mt-heat .mt-htime {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4px;
+}
+
+.mt-heat button {
+  min-width: 44px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  cursor: pointer;
+  padding: 0;
+}
+
+.mt-heat.dense button {
+  height: 20px;
+  font-size: 0.6875rem;
+}
+
+.mt-heat button.dark {
+  color: #fff;
+}
+
+.mt-heat button.sel {
+  outline: 2px solid var(--text-strong);
+  outline-offset: 1px;
+}
+
+.mt-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.mt-legend i {
+  width: 18px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  display: inline-block;
+}
+
+.mt-back {
+  align-self: flex-start;
+}
+
+.chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.mt-daynav .btn-icon:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
