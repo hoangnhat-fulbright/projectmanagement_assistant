@@ -3,6 +3,7 @@
 ## Product README
 
 Product link: https://tro-ly-tuan.vercel.app/
+Demo video: https://drive.google.com/file/d/1zZR8QFMdamztYJJyK7YUP3jrJIBOllO4/view?usp=sharing
 
 A Vietnamese-first project planning app that helps small teams turn an idea into a clear weekly plan, share responsibilities, and follow work through to completion—without requiring prior project management experience.
 
