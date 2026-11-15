@@ -1,8 +1,8 @@
-# Cam kết sau họp
+# Project Assistant
 
 _English version. Bản tiếng Việt: [README.vi.md](README.vi.md)._
 
-**Cam kết sau họp** ("Commitments after the meeting") turns every meeting into commitments that are tracked until they are done. You paste a meeting transcript; AI extracts each task together with the sentence that proves it; each person gets one email and confirms their own tasks with one click, no account needed; after that the app reminds them in a real free gap in their calendar instead of at a fixed hour when everyone is in another meeting. Meeting note tools stop at the minutes; this app starts from them.
+**Project Assistant** ("Trợ lý dự án") turns every meeting into commitments that are tracked until they are done. You paste a meeting transcript; AI extracts each task together with the sentence that proves it; each person gets one email and confirms their own tasks with one click, no account needed; after that the app reminds them in a real free gap in their calendar instead of at a fixed hour when everyone is in another meeting. Meeting note tools stop at the minutes; this app starts from them.
 
 | Deliverable | Where |
 |---|---|
